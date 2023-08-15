@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  const taskForm = $('#taskForm');
-  const taskList = $('#taskList');
+  const taskForm = $('#task-form');
+  const taskList = $('#task-list');
 
   loadTasks();
 
@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     addTaskToDatabase(taskTime, taskDescription, taskAlarm);
     taskForm[0].reset();
-    taskList.innerHTML = '';
+    taskList.empty();
     loadTasks();
   });
 
@@ -38,6 +38,7 @@ $(document).ready(function () {
   function loadTasks() {
     $.get('/getTasks', function (tasks) {
       tasks.forEach((task) => {
+        console.log(task);
         addTask(task.time, task.description, task.alarm, task.id);
       });
     });

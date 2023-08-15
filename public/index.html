@@ -3,31 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Scheduler</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>Task Scheduler</title>
   </head>
   <body>
     <div class="container">
       <h1>Task Scheduler</h1>
-      <form id="taskForm">
+      <form id="task-form">
+        <label for="taskTime">Date & Time</label>
         <input
           type="datetime-local"
           id="taskTime"
           class="task-input"
           required
         />
-        <input
-          type="text"
-          id="taskDescription"
-          class="task-input"
-          placeholder="Description"
-          required
-        />
-        <label for="taskAlarm" class="task-label">Set Alarm:</label>
-        <input type="checkbox" id="taskAlarm" class="task-input" />
+        <label for="taskDescription">Description</label>
+        <input type="text" id="taskDescription" class="task-input" required />
+        <label for="taskAlarm">Set Alarm</label>
+        <input type="checkbox" id="taskAlarm" class="task-checkbox" />
         <button type="submit" class="task-button">Add Task</button>
       </form>
-      <ul id="taskList" class="task-list"></ul>
+    </div>
+    <div class="task-list-container">
+      <ul id="task-list" class="task-list">
+        <!-- Tasks will be added here dynamically -->
+      </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
