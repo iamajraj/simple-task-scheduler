@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Scheduler</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Scheduler</h1>
+      <form id="taskForm">
+        <input
+          type="datetime-local"
+          id="taskTime"
+          class="task-input"
+          required
+        />
+        <input
+          type="text"
+          id="taskDescription"
+          class="task-input"
+          placeholder="Description"
+          required
+        />
+        <label for="taskAlarm" class="task-label">Set Alarm:</label>
+        <input type="checkbox" id="taskAlarm" class="task-input" />
+        <button type="submit" class="task-button">Add Task</button>
+      </form>
+      <ul id="taskList" class="task-list"></ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
