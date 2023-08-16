@@ -57,7 +57,6 @@ $(document).ready(function () {
     taskList.append(newTask);
   }
 
-  // Function to handle task deletion
   function deleteTask(id) {
     $.ajax({
       url: `/deleteTask/${id}`,
